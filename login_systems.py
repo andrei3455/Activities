@@ -1,13 +1,13 @@
 print("Login System")
 print("============")
-correct_user = "andreiabena"
-correct_pass = "andrei3455"
+correct_username = "andreiabena"
+correct_password = "andrei3455"
 
-username=input("Input Username: ")
-password=input("Input Password: ")
+username_input=input("Input Username: ")
+password_input=input("Input Password: ")
 
-if username == correct_user:
-    if password == correct_pass:
+if username_input == correct_username:
+    if password_input == correct_password:
         print("Welcome! Login successful.")
     else:
         print("Incorrect password.")
