@@ -1,7 +1,7 @@
 print("Login System")
 print("============")
-correct_user = "admin"
-correct_pass = "12345"
+correct_user = "andreiabena"
+correct_pass = "andrei3455"
 
 username=input("Input Username: "
     )
