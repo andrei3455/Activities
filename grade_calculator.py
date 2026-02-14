@@ -1,7 +1,6 @@
 print("Grade Calculator")
 print("================")
-score=int(input("Input Score (0-100): "
-    ))
+score=int(input("Input Score (0-100): "))
 
 if score > 100 or score < 0:
     print("Invalid score! Please enter a number between 0 and 100.")
