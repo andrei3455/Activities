@@ -1,16 +1,21 @@
 print("Grade Calculator")
 print("================")
-score=int(input("Input Score (0-100): "))
-
-if score > 100 or score < 0:
+print("Grade: A - Excellent!")
+print("Grade: B - Very Good!")
+print("Grade: C - Good Job!")
+print("Grade: D - Keep Improving!")
+print("Grade: F - Try again!")
+print(" ")
+student_score=int(input("Input Score (0-100): "))
+if student_score > 100 or student_score < 0:
     print("Invalid score! Please enter a number between 0 and 100.")
-elif score >= 90:
+elif student_score >= 90:
     print("Grade: A - Excellent!")
-elif score >= 80:
+elif student_score >= 80:
     print("Grade: B - Very Good!")
-elif score >= 70:
+elif student_score >= 70:
     print("Grade: C - Good Job!")
-elif score >= 60:
+elif student_score >= 60:
     print("Grade: D - Keep Improving!")
 else:
     print("Grade: F - Try again!")
