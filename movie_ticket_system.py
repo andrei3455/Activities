@@ -1,22 +1,18 @@
 print("=== MOVIE TICKET SYSTEM ===")
-day=input("Day (weekday/weekend): "
-    )
-customer=input("Customer type (regular/student/senior): "
-    )
-time=int(input("Show time (9-22 Hours): "
-    ))
-tickets=int(input("Number of tickets (1 or more): "
-    ))
+day_type=input("Day (weekday/weekend): ")
+customer_type=input("Customer type (regular/student/senior): ")
+show_time_hours=int(input("Show time hours (9-22 Hours): "))
+num_tickets=int(input("Number of tickets (1 or more): "))
 
-if time < 9 or time > 22 or tickets <= 0:
+if show_time_hours < 9 or show_time_hours > 22 or num_tickets <= 0:
     print("Invalid input")
 else:
-    if day == "weekend":
+    if day_type == "weekend":
         base_rate = 300.0
     else:
         base_rate = 200.0
     
-    total = base_rate * tickets
+    total = base_rate * num_tickets
     current_price = total
 
     student_discount = 0.0
@@ -24,23 +20,23 @@ else:
     matinee_discount = 0.0
     group_discount = 0.0
 
-    if customer == "student":
+    if customer_type == "student":
         student_discount = current_price * 0.20
         current_price = current_price - student_discount
-    elif customer == "senior":
+    elif customer_type == "senior":
         senior_discount = current_price * 0.30
         current_price = current_price - senior_discount
         
-    if time < 12:
+    if show_time_hours < 12:
         matinee_discount = current_price * 0.10
         current_price = current_price - matinee_discount
         
-    if tickets >= 5:
+    if num_tickets >= 5:
         group_discount = current_price * 0.05
         current_price = current_price - group_discount
 
     print("--- RECEIPT ---")
-    print(f"Base price: {base_rate} x {tickets} = {total}")
+    print(f"Base price: {base_rate} x {num_tickets} = {total}")
     
     if student_discount > 0:
         print(f"Student discount (20%): -{student_discount}")
