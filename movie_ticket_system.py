@@ -1,10 +1,10 @@
 print("=== MOVIE TICKET SYSTEM ===")
 day_type=input("Day (weekday/weekend): ")
 customer_type=input("Customer type (regular/student/senior): ")
-show_time_hours=int(input("Show time hours (9-22 Hours): "))
+show_time_hours=int(input("Show time hours (1-24 Hours): "))
 num_tickets=int(input("Number of tickets (1 or more): "))
 
-if show_time_hours < 9 or show_time_hours > 22 or num_tickets <= 0:
+if show_time_hours < 1 or show_time_hours > 24 or num_tickets <= 0:
     print("Invalid input")
 else:
     if day_type == "weekend":
